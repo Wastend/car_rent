@@ -1,0 +1,212 @@
+.features {
+  padding: 70px 0 18px;
+}
+
+.features__grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px 23px;
+}
+
+.features__grid li {
+  font-size: 16px;
+  line-height: 1.35;
+  display: flex;
+  align-items: center;
+}
+
+.features--bottom {
+  padding-top: 30px;
+  padding-bottom: 88px;
+}
+
+.features--bottom .features__grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  text-align: center;
+}
+
+.features--bottom .features__grid li {
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.features--bottom .features__grid li span:last-child {
+  max-width: 166px;
+}
+
+.features--bottom .tick {
+  margin: 0;
+  top: 0;
+}
+
+.vehicle-benefits {
+  padding: 12px 0 89px;
+}
+
+.vehicle-benefits__grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.vehicle-benefits__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.vehicle-benefits__item .tick {
+  margin: 0;
+  top: 0;
+}
+
+.vehicle-benefits__item span:not(.lick) {
+  max-width: 213px;
+  margin: 0 auto;
+  line-height: 1.25;
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+
+  .features {
+    padding: 50px 0 18px;
+  }
+
+  .features__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .features--bottom .features__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .vehicle-benefits__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .vehicle-benefits__item {
+    gap: 15px;
+  }
+
+  .vehicle-benefits__item:nth-child(4) {
+    display: none;
+  }
+
+  .vehicle-benefits__item span:not(.lick) {
+    max-width: 175px;
+  }
+
+  .vehicle-benefits {
+    padding: 12px 0 70px;
+  }
+
+  .features--bottom .features__grid li:nth-child(4) {
+    display: none;
+  }
+
+  .features--bottom {
+    padding-top: 26px;
+    padding-bottom: 84px;
+  }
+
+  .features--bottom .features__grid li {
+    gap: 11px;
+  }
+
+  .features--bottom .features__grid li span:last-child {
+    max-width: 138px;
+    letter-spacing: -.5px;
+  }
+}
+
+@media (max-width: 767px) {
+  .features {
+    padding: 45px 8px 8px;
+  }
+
+  .features__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .features__grid li {
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .features:not(.features--bottom) .features__grid li:nth-child(1),
+  .features:not(.features--bottom) .features__grid li:nth-child(4),
+  .features:not(.features--bottom) .features__grid li:nth-child(6) {
+    display: none;
+  }
+
+  .vehicle-benefits {
+    padding: 13px 0 19px;
+  }
+
+  .vehicle-benefits__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .vehicle-benefits__item {
+    gap: 8px;
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  .vehicle-benefits .container {
+    padding: 0 4px;
+  }
+
+  .vehicle-benefits__item:nth-child(4) {
+    display: none;
+  }
+
+  .vehicle-benefits__item span:not(.lick) {
+    max-width: 92px;
+  }
+
+  .features--bottom {
+    padding-top: 11px;
+    padding-bottom: 35px;
+  }
+
+  .features--bottom .features__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .features--bottom .features__grid li:nth-child(4) {
+    display: none;
+  }
+
+  .features--bottom .features__grid li {
+    gap: 8px;
+  }
+
+  .features--bottom .features__grid li span:last-child {
+    max-width: 130px;
+    font-size: 16px;
+    letter-spacing: -.25px;
+    line-height: 1.2;
+  }
+
+  .features__grid .tick {
+    margin-right: 0;
+  }
+}

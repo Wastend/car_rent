@@ -1,0 +1,198 @@
+.search-card {
+  margin-top: 28px;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 70px rgba(0, 0, 0, 0.16);
+  padding: 37px 30px 37px 37px;
+}
+
+.search-card__row {
+  display: grid;
+  gap: 0;
+}
+
+.search-card__row--desktop {
+  grid-template-columns: 36.15% 25.3% 25.3% 11.89%;
+}
+
+.search-card__row--tablet,
+.search-card__row--mobile {
+  display: none;
+}
+
+.field {
+  border: 1px solid #e1e1e1;
+  background: #f4f6f7;
+  min-height: 80px;
+  padding: 3px 14px 14px 14px;
+  padding-right: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  position: relative;
+}
+
+.field::after {
+  content: "";
+  width: 14px;
+  height: 10px;
+  position: absolute;
+  right: 16px;
+  bottom: 23px;
+  background: url('../../assets/icons/arrow.svg') center/contain no-repeat;
+  pointer-events: none;
+}
+
+.field span {
+  color: var(--blue);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.field__select {
+  border: 0;
+  background: transparent;
+  font-size: 16px;
+  color: var(--text);
+  padding: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  line-height: 1.2;
+  font-family: "Euclid Circular A", "Avenir Next", "Segoe UI", sans-serif;
+}
+
+.field__select:focus {
+  outline: none;
+}
+
+.search-card__submit {
+  border: 0;
+  border-radius: 6px;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 25px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.search-card__row--desktop .search-card__submit {
+  margin-left: 28px;
+}
+
+.search-card__row--mobile .search-card__submit {
+  margin-top: 28px;
+}
+
+.search-card__submit--mobile {
+  font-size: 16px;
+  height: 53px;
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .search-card {
+    margin-top: 42px;
+    padding: 26px 29px;
+  }
+
+  .search-card__row--desktop,
+  .search-card__row--mobile {
+    display: none;
+  }
+
+  .search-card__row--tablet {
+    display: grid;
+    grid-template-columns: 1fr 16.4% 20% 15.43%;
+    grid-template-areas:
+      "date date date date"
+      "pick1 pick2 pick2 go";
+    row-gap: 14px;
+    column-gap: 15px;
+  }
+
+  .search-card__row--tablet .field--full {
+    grid-area: date;
+  }
+
+  .search-card__row--tablet .field:nth-of-type(2) {
+    grid-area: pick1;
+  }
+
+  .search-card__row--tablet .field:nth-of-type(3) {
+    grid-area: pick2;
+  }
+
+  .search-card__row--tablet .search-card__submit {
+    grid-area: go;
+    margin-left: 2px;
+  }
+
+  .field::after {
+    width: 16px;
+    height: 12px;
+    position: absolute;
+    right: 18px;
+    bottom: 21px;
+  }
+}
+
+@media (max-width: 767px) {
+  .search-card {
+    margin-top: 26px;
+    padding: 25px 20px 24px 20px;
+    border-radius: 12px;
+  }
+
+  .search-card__row--desktop,
+  .search-card__row--tablet {
+    display: none;
+  }
+
+  .search-card__row--mobile {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .field {
+    min-height: 64px;
+    padding: 7px 14px 5px;
+    padding-right: 30px;
+    gap: 12px;
+    border-radius: 6px;
+  }
+
+  .field span {
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.02em;
+  }
+
+  .field__select {
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .field::after {
+    width: 10px;
+    height: 6px;
+    right: 11px;
+    bottom: 18px;
+  }
+
+  .search-card__row--mobile .search-card__submit {
+    margin-top: 6px;
+    height: 53px;
+    font-size: 16px;
+    border-radius: 6px;
+    width: 100%;
+  }
+}

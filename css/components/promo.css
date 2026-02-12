@@ -1,0 +1,127 @@
+.promo {
+  position: relative;
+}
+
+.promo__bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(100%, 1560px);
+  overflow: hidden;
+  box-shadow:
+    -16px 0 20px -18px rgba(0, 0, 0, 0.35),
+    16px 0 20px -18px rgba(0, 0, 0, 0.35);
+}
+
+.promo__bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.promo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 32, 69, 0.2);
+}
+
+.promo .container {
+  position: relative;
+  z-index: 1;
+  padding: 92px 0 33px;
+}
+
+.promo__card {
+  width: 356px;
+  min-height: 331px;
+  background: var(--blue);
+  padding: 38px 42px 38px 30px;
+}
+
+.promo__card h2 {
+  margin: 0;
+  color: var(--light-blue);
+  font-size: 54px;
+  line-height: 0.94;
+  letter-spacing: -3px;
+}
+
+.promo__card h2 span {
+  color: var(--white);
+}
+
+.promo__card p {
+  margin: 15px 0 47px;
+  color: var(--white);
+  line-height: 1.4;
+  letter-spacing: -.25px;
+  padding-right: 2px;
+}
+
+.promo__card .btn {
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.promo__card .btn::after {
+  content: "";
+  width: 12px;
+  height: 6px;
+  background: url('../../assets/icons/arrow.svg') center/contain no-repeat;
+  transform: rotate(-90deg);
+  flex-shrink: 0;
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .promo__card {
+    width: 356px;
+  }
+
+  .promo .container {
+    padding: 67px 0 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .promo {
+    min-height: 500px;
+    padding-bottom: 41px;
+  }
+
+  .promo__bg {
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .promo .container {
+    padding: 169px 0 0px;
+  }
+
+  .promo__card {
+    width: 100%;
+    min-height: 273px;
+    padding: 32px 47px 29px;
+  }
+
+  .promo__card h2 {
+    font-size: 31.55px;
+    line-height: 1.15;
+    letter-spacing: -.5px;
+  }
+
+  .promo__card p {
+    margin: 11px 0 33px;
+    line-height: 1.22;
+  }
+
+  .promo__card .btn {
+    height: 50px;
+    max-width: 139px;
+    font-size: 16px;
+  }
+}

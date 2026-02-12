@@ -1,0 +1,294 @@
+.airport {
+  display: flex;
+  position: relative;
+  min-height: 712px;
+}
+
+.airport__bg {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(100%, 1560px);
+}
+
+.airport__bg {
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  box-shadow:
+    -16px 0 20px -18px rgba(0, 0, 0, 0.35),
+    16px 0 20px -18px rgba(0, 0, 0, 0.35);
+}
+
+.airport__bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.airport__route {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.airport__bg,
+.airport__route {
+  width: 1560px;
+}
+
+
+.airport__line {
+  position: absolute;
+  left: 296px;
+  top: 256px;
+  width: 470px;
+}
+
+.airport__icon {
+  position: absolute;
+}
+
+.airport__icon--airport {
+  left: 190px;
+  top: 285px;
+  width: 72px;
+  height: 72px;
+}
+
+.airport__icon--airport img {
+  width: 100%;
+  height: 100%;
+}
+
+.airport__icon--company {
+  left: 664px;
+  top: 157px;
+  width: 205px;
+  height: 119px;
+}
+
+.airport__icon--company img {
+  width: 100%;
+  height: 100%;
+}
+
+.airport__content {
+  position: relative;
+  display: flex;
+  justify-content: end;
+  margin: auto auto 29px auto;
+  z-index: 2;
+}
+
+.airport__card {
+  background: var(--blue);
+  color: var(--white);
+  padding: 38px 42px 35px 30px;
+  max-width: 356px;
+}
+
+.airport__card h2 {
+  margin: 0;
+  font-size: 54px;
+  line-height: 0.95;
+  font-weight: 600;
+  letter-spacing: -3px;
+}
+
+.airport__card h2 span {
+  color: var(--light-blue);
+}
+
+.airport__card p {
+  margin: 26px 0 26px;
+  line-height: 1.45;
+  letter-spacing: -.25px;
+}
+
+.airport__card .btn {
+  width: 100%;
+  margin-top: 11px;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.airport__card .btn::after {
+  content: "";
+  width: 12px;
+  height: 6px;
+  background: url('../../assets/icons/arrow.svg') center/contain no-repeat;
+  transform: rotate(-90deg);
+  flex-shrink: 0;
+}
+
+.airport__bg-img-tablet {
+  display: none;
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .airport {
+    min-height: 497px;
+    padding-bottom: 0;
+  }
+
+  .airport__bg,
+  .airport__route {
+    width: 992px;
+  }
+
+  .airport__line {
+    display: none;
+  }
+
+  .airport__icon--airport {
+    left: 230px;
+    top: 173px;
+  }
+
+  .airport__icon--company {
+    left: 562px;
+    top: 149px;
+    width: 203px;
+    height: 118px;
+  }
+
+  .airport__icon--arrow {
+    left: 427px;
+    top: 224px;
+  }
+
+  .airport__content {
+    justify-content: center;
+    margin: auto auto -55px auto;
+  }
+
+  .airport__card {
+    max-width: 695px;
+    width: 100%;
+    min-height: 225px;
+    padding: 35px 28px 24px 38px;
+  }
+
+  .airport__card h2 {
+    font-size: 42px;
+    line-height: 38px;
+    letter-spacing: -1.8px;
+  }
+
+  .airport__card p {
+    margin: 10px 0 33px;
+    max-width: 581px;
+  }
+
+  .airport__card .btn {
+    width: auto;
+    display: inline-flex;
+    margin-top: 0;
+    margin-right: 8px;
+    vertical-align: top;
+  }
+
+  .airport__card .btn:first-of-type {
+    width: 167px;
+  }
+
+  .airport__card .btn:last-of-type {
+    width: 231px;
+  }
+
+  .airport__bg-img-desktop {
+    display: none;
+  }
+
+  .airport__bg-img-tablet {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .airport {
+    min-height: 616px;
+    padding: 0;
+  }
+
+  .airport__bg,
+  .airport__route {
+    width: 412px;
+  }
+
+  .airport__bg {
+    box-shadow: none;
+  }
+
+  .airport__line {
+    display: none;
+  }
+
+  .airport__icon--airport {
+    width: 51px;
+    height: 51px;
+    left: 41px;
+    top: 206px;
+  }
+
+  .airport__icon--company {
+    width: 126px;
+    height: 72px;
+    right: 22px;
+    left: auto;
+    top: 196px;
+  }
+
+  .airport__bg-img-desktop {
+    display: none;
+  }
+
+  .airport__bg-img-tablet {
+    display: block;
+  }
+
+  .airport__content {
+    justify-content: center;
+    margin: auto auto -35px auto;
+  }
+
+  .airport__card {
+    max-width: none;
+    width: 100%;
+    padding: 29px 32px 38px;
+  }
+
+  .airport__card h2 {
+    font-size: 34px;
+    line-height: 1.06;
+    letter-spacing: -1.92px;
+    max-width: 280px;
+  }
+
+  .airport__card p {
+    margin: 17px 0 34px;
+    font-size: 17px;
+    max-width: 300px;
+    line-height: 1.22;
+  }
+
+  .airport__card .btn {
+    margin-top: 0;
+    margin-bottom: 13px;
+    height: 53px;
+    border-radius: 4px;
+    padding: 0 24px;
+    font-size: 16px;
+    letter-spacing: .5px;
+  }
+
+  .airport__card .btn:last-of-type {
+    margin-bottom: 0;
+  }
+}

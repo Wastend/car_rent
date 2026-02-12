@@ -1,0 +1,149 @@
+.tips {
+  padding-top: 90px;
+  padding-bottom: 29px;
+}
+
+.tips .section__title {
+  margin-bottom: 20px;
+}
+
+.tips__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tips__item {
+  border-bottom: 1px solid var(--line);
+}
+
+.tips__question {
+  width: 100%;
+  min-height: 80px;
+  border: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+.tips__question span:first-child {
+  font-size: 24px;
+  color: var(--muted);
+  letter-spacing: -.5px;
+}
+
+.tips__icon {
+  font-size: 54px;
+  margin-bottom: 8px;
+  color: var(--blue);
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+.tips__question[aria-expanded="true"] .tips__icon {
+  transform: rotate(45deg);
+}
+
+.tips__answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: max-height 0.32s ease, opacity 0.25s ease, visibility 0s linear 0.32s;
+}
+
+.tips__answer p {
+  margin: 0;
+  padding: 0 0 12px;
+  font-size: 16px;
+  line-height: 1.45;
+  color: #4c545c;
+}
+
+.tips__answer.is-open {
+  opacity: 1;
+  visibility: visible;
+  transition: max-height 0.32s ease, opacity 0.25s ease, visibility 0s linear 0s;
+}
+
+.tips__answer ul,
+.tips__answer ol {
+  margin: 0;
+  padding: 0 0 18px 20px;
+  color: #4c545c;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.tips__answer li+li {
+  margin-top: 4px;
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .tips__question span:first-child {
+    font-size: 20px;
+  }
+
+  .tips {
+    padding-top: 128px;
+    padding-bottom: 14px;
+  }
+
+  .tips .section__title {
+    letter-spacing: -2px;
+    margin-bottom: 6px;
+  }
+
+  .tips__question {
+    min-height: 71px;
+  }
+
+  .tips__icon {
+    font-size: 50px;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .tips {
+    padding-top: 82px;
+    padding-bottom: 3px;
+  }
+
+  .tips .section__title {
+    margin-bottom: 19px;
+    letter-spacing: -1.88px;
+  }
+
+  .tips__question {
+    min-height: 46px;
+  }
+
+  .tips__question span:first-child {
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: -0.3px;
+  }
+
+  .tips__icon {
+    font-size: 41px;
+  }
+
+  .tips__answer p {
+    padding: 0 0 8px;
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  .tips__answer ul,
+  .tips__answer ol {
+    padding: 0 0 14px 18px;
+    font-size: 12px;
+    line-height: 1.35;
+  }
+}
