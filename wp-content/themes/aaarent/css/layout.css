@@ -1,0 +1,30 @@
+.container {
+  width: 100%;
+  max-width: 1116px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 72px 0;
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .container {
+    max-width: 696px;
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: none;
+    padding: 0 16px;
+  }
+
+  .section {
+    padding: 44px 0;
+  }
+}
